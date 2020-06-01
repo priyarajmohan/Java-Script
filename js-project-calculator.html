@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js-calculator</title>
+</head>
+<body>
+
+<label>Enter first number:</label>
+<input id="num1" type="number"  value=""><br>
+<br>
+<label>Enter second number:</label>
+<input id="num2" type="number"  value=""><br>
+<br>
+
+<label>Operators:</label>
+<select id="op">
+	<option>+</option>
+	<option>-</option>
+	<option>*</option>
+	<option>/</option>
+</select>
+
+<p id="demo"></p>
+<button onclick="myFunction()">Tryit</button>
+
+<script type="text/javascript">
+	function myFunction()
+	{
+	var x;
+	var a = document.getElementById('num1').value;
+	var b = document.getElementById('num2').value;
+	var Operator = document.getElementById("op").value;
+
+
+if(Operator == "-")
+{
+ x = Number(a) - Number(b);
+}
+else if(Operator == "+")
+{
+ x = parseInt(a) + parseInt(b);	
+}
+else if (Operator == "*") 
+{
+ x = a * b;
+}
+
+else
+{
+	x = a / b;
+}
+
+
+document.getElementById("demo").innerHTML = x;
+}
+</script>
+</body>
+</html>

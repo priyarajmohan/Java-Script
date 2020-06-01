@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>aray</title>
+</head>
+<body>
+<p id="demo"></p>
+<p id="demo1"></p>
+
+<button onclick="myFunction()">click</button>
+
+<script type="text/javascript">
+	var fruits = ["Banana","Kiwi","orange","Apple"];
+	document.getElementById('demo').innerHTML = fruits ;
+	
+	function myFunction()
+	{
+	fruits.unshift("mango");
+	document.getElementById('demo').innerHTML = fruits;
+	document.getElementById('demo1').innerHTML = fruits.unshift("mango");
+
+	}
+
+</script>
+</body>
+</html>

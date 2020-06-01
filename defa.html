@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>switch</p>
+
+
+<p id="demo"></p>
+
+<script>
+  var day ;
+  switch(new Date().getDay())
+  {
+  case 6:
+  
+    day = "saturday";
+break;
+  
+  case 0:
+  
+    day = "sun day";
+  break;
+  default:
+  day = "week day";
+}
+  document.getElementById("demo").innerHTML = "today is" +" " + day;
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>aray</title>
+</head>
+<body>
+<p> The highest value is <span id="demo"></span></p>
+
+
+
+<script type="text/javascript">
+	var points = [40,1,5,36,100,50,72];
+	document.getElementById("demo").innerHTML = myArrayMax(points) ;
+	
+	function myArrayMax(arr)
+	{
+	var len = arr.length;
+	var max = -Infinity;
+	while(len--){
+		if (arr[len]>max) 
+		{
+		max = arr[len];	
+		}
+
+	}
+ return max;
+}
+</script>
+</body>
+</html>

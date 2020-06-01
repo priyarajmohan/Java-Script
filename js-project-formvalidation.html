@@ -1,0 +1,49 @@
+<html>
+<body>
+<script>  
+function validateform(event){  
+  event.preventDefault();
+  var name=document.myform.name.value;  
+  var password=document.myform.password.value;
+  var number=document.myform.number.value;
+
+  var email=document.myform.email.value;
+    
+  if (name==null || name==""){  
+     document.getElementById("div1").innerHTML="Enter a value";
+     document.getElementById("div1").style.color="Red"; 
+     
+  }
+  if (password.length<6){  
+    document.getElementById("div2").innerHTML = "Password must be at least 6 characters long.";
+    document.getElementById("div2").style.color="Red";
+      
+    }
+    if(email==""){  
+    document.getElementById("div3").innerHTML = "Enter the correct email address";
+    document.getElementById("div3").style.color="Red";
+      
+    }
+    if  (number==""){  
+    document.getElementById("div4").innerHTML = "Enter  numbers";
+    document.getElementById("div4").style.color="Red";
+      
+
+  }
+  } 
+   
+           
+</script>  
+<body>  
+<form name="myform" method="post" id="reg" onsubmit="validateform(event)" >  
+Name: <input type="text" name="name"><div id="div1"></div><br/>  
+Password: <input type="password" name="password"><div id="div2"></div><br/>
+Email: <input type="email" name="email"><div id="div3"></div><br/>
+Phone: <input type="number" name="number"><div id="div4"></div><br/>
+
+<input type="submit" value="submit">  
+</form>  
+</body>
+</html>
+
+ 
